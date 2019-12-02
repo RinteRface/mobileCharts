@@ -1,0 +1,25 @@
+Package: mobileCharts
+Title: Mobile Charts
+Version: 0.0.0.9000
+Authors@R: 
+    c(
+        person(
+            given = "John",
+            family = "Coene",
+            role = c("aut", "cre"),
+            email = "jcoenep@gmail.com"
+        ),
+        person(family = "rinterface", role = "cph")
+    )
+Description: Create charts optimized for mobile.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    purrr,
+    rlang,
+    ggplot2,
+    magrittr,
+    htmltools,
+    htmlwidgets
+RoxygenNote: 7.0.1

@@ -1,0 +1,5 @@
+dependencies:
+ - name: f2
+   version: 3.4.2
+   src: htmlwidgets/lib/f2
+   script: f2.min.js
