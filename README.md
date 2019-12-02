@@ -44,7 +44,7 @@ ui <- f7Page(
       intensity = 16,
       f7Card(
         title = "Chart",
-        mcOutput("mc", width = 400)
+        mobileOutput("mc", width = 400)
       )
     )
   )
