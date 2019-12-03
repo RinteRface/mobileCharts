@@ -31,7 +31,7 @@ df <- data.frame(
 
 mobile(df, aes(x, value, color = label, adjust = stack)) \%>\% 
  mobile_bar() \%>\% 
- mobile_coord("polar") \%>\% 
+ mobile_coord("polar", transposed = TRUE) \%>\% 
  mobile_hide_axis()
 
 }

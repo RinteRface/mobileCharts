@@ -1,0 +1,73 @@
+<!-- badges: start -->
+<!-- badges: end -->
+
+# mobileCharts
+
+The goal of mobileCharts is to bring mobile friendly charts to [shinyMobile](https://rinterface.github.io/shinyMobile/) via [f2](https://f2.antv.vision/en).
+
+## Installation
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(htmltools)
+
+device <- function(...){
+  div(
+    class="marvel-device iphone8 silver",
+    div(class="top-bar"),
+    div(class="sleep"),
+    div(class="sleep"),
+    div(class="volume"),
+    div(class="camera"),
+    div(class="sensor"),
+    div(class="speaker"),
+    div(class="screen", ...),
+    div(class="home"),
+    div(class="bottom-bar")
+  )
+}
+
+library(mobileCharts)
+```
+
+``` r
+install.packages("remotes")
+remotes::install_github("rinterface/mobileCharts")
+```
+
+## Examples
+
+<div class="row">
+<div class="col-md-6">
+```{r, echo=TRUE, eval=FALSE}
+df <- data.frame(x = letters, y = runif(26))
+mobile(df, aes(x, y)) %>% 
+  mobile_bar()
+```
+
+```{r, echo=FALSE}
+df <- data.frame(x = letters, y = runif(26))
+mobile(df, aes(x, y)) %>% 
+  mobile_bar() %>% 
+  device()
+```
+</div>
+
+<div class="col-md-6">
+```{r, echo=TRUE, eval=FALSE}
+mobile(iris, aes(Sepal.Length, Sepal.Width, color = Species)) %>% 
+  mobile_point()
+```
+
+```{r, echo=FALSE}
+mobile(iris, aes(Sepal.Length, Sepal.Width, color = Species)) %>% 
+  mobile_point() %>% 
+  device()
+```
+</div>
+
+</div>

@@ -1,0 +1,6 @@
+destination: docs
+
+template:
+  params:
+    bootswatch: lumen
+

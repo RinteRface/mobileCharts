@@ -29,7 +29,7 @@ has_aes <- function(...){
 
 combine_aes <- function(main_aes = NULL, aes = NULL, inherit = TRUE){
 
-  if(isTRUE(inherit) && length(main_aes))
+  if(isTRUE(inherit) && !length(main_aes))
     return(main_aes)
 
   if(isTRUE(inherit)){
@@ -45,6 +45,9 @@ combine_aes <- function(main_aes = NULL, aes = NULL, inherit = TRUE){
 extract_aes <- function(aes, var){
   if(is.null(aes[[var]]))
     return(NULL)
+
+  if(rlang::is_bare_numeric(aes[[var]]) || rlang::is_bare_string(aes[[var]]))
+    return(aes[[var]])
 
   rlang::as_label(aes[[var]])
 }

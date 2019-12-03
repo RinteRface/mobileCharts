@@ -20,7 +20,7 @@ Change chart coordinates.
 \examples{
 mobile(df, aes(label, value, color = label)) \%>\% 
  mobile_bar() \%>\% 
- mobile_coord("polar", innerRadius = .7) \%>\% 
+ mobile_coord("polar", transposed = TRUE, innerRadius = .7) \%>\% 
  mobile_hide_axis()
 
 }

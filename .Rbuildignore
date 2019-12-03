@@ -1,2 +1,7 @@
 ^LICENSE\.md$
 test.R
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+vignettes
+index.Rmd

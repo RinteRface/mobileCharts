@@ -10,7 +10,7 @@
 #' @examples 
 #' mobile(df, aes(label, value, color = label)) %>% 
 #'  mobile_bar() %>% 
-#'  mobile_coord("polar", innerRadius = .7) %>% 
+#'  mobile_coord("polar", transposed = TRUE, innerRadius = .7) %>% 
 #'  mobile_hide_axis()
 #' 
 #' @export
@@ -42,7 +42,7 @@ mobile_coord <- function(m, type = c("rect", "polar"), ...) {
 #' 
 #' mobile(df, aes(x, value, color = label, adjust = stack)) %>% 
 #'  mobile_bar() %>% 
-#'  mobile_coord("polar") %>% 
+#'  mobile_coord("polar", transposed = TRUE) %>% 
 #'  mobile_hide_axis()
 #' 
 #' @name axis
