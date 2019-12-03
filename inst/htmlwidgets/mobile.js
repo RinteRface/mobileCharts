@@ -45,8 +45,42 @@ HTMLWidgets.widget({
           if(layer.shape) l.shape(layer.shape);
           if(layer.style) l.style(layer.style);
           if(layer.animate) l.animate(layer.animate);
+          if(layer.adjust) l.adjust(layer.adjust);
 
         });
+
+        if(x.tooltip)
+          chart.tooltip(x.tooltip);
+
+        if(x.legend)
+          chart.legend(x.legend);
+
+        if(x.scales){
+          x.scales.forEach(function(scl){
+            chart.scale(scl.var, scl.opts);
+          })
+        }
+
+        if(x.coord)
+          chart.coord(x.coord.type, x.coord.opts);
+
+        if(x.axisHide)
+          chart.axis(false);
+
+        if(x.axis){
+          x.axis.forEach(function(ax){
+            chart.axis(ax.var, ax.opts);
+          })
+        }
+
+        if(x.adjust)
+          chart.adjust(x.adjust);
+
+        if(x.animations){
+          x.animations.forEach(function(anim){
+            chart.animate(anim);
+          })
+        }
 
         chart.render();
 
