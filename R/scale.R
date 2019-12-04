@@ -14,25 +14,49 @@
 #' @name scale
 #' @export
 mobile_scale_x <- function(m, ...) {
-  var <- m$x$aes[["x"]]
-  if(is.null(var))
-    stop("No `x` aesthetic found.")
+  vars <- get_scaling_vars(m, "x", ...)
 
-  m$x$scales <- append(m$x$scales, mobile_scale(rlang::as_label(var), ...))
+  m$x$scales <- append(m$x$scales, vars)
   return(m)
 }
 
 #' @rdname scale
 #' @export
 mobile_scale_y <- function(m, ...) {
-  var <- m$x$aes[["y"]]
-  if(is.null(var))
-    stop("No `y` aesthetic found.")
 
-  m$x$scales <- append(m$x$scales, mobile_scale(rlang::as_label(var), ...))
+  vars <- get_scaling_vars(m, "y", ...)
+
+  m$x$scales <- append(m$x$scales, vars)
   return(m)
 }
 
 mobile_scale <- function(var, ...) {
-  list(list(var = var, opts = list(...)))
+  list(var = var, opts = list(...))
+}
+
+get_scaling_vars <- function(m, aes = c("x", "y"), ...){
+
+  aes <- ifelse(aes == "x", 1, 2)
+
+  var <- m$x$aes[["y"]] # get main aes
+
+  # get layers aes
+  vars <- purrr::map(m$x$layers, function(x, aes){
+    x$position[[aes]]
+  }, aes = aes) %>% 
+    unlist()
+  
+  # append if layers found
+  if(!is.null(var))
+    vars <- c(vars, rlang::as_label(var))
+
+  # distinct aes
+  vars <- unique(vars)
+
+  if(!length(vars))
+    stop("No `y` aesthetic found.")
+
+  purrr::map(vars, function(x, ...){
+    mobile_scale(x, ...)
+  }, ...)
 }
