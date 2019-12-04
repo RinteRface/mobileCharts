@@ -5,3 +5,5 @@ test.R
 ^pkgdown$
 vignettes
 index.Rmd
+^.*\.Rproj$
+^\.Rproj\.user$
