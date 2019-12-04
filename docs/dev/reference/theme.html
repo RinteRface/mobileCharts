@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • mobileCharts</title>
+<title>Theme — theme • mobileCharts</title>
 
 
 <!-- jquery -->
@@ -35,7 +35,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Theme — theme" />
+<meta property="og:description" content="Set a theme" />
+<meta name="twitter:card" content="summary" />
 
 
 <meta name="robots" content="noindex">
@@ -53,7 +55,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -106,102 +108,50 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Theme</h1>
+    
+    <div class="hidden name"><code>theme.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Set a theme</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>mobile_theme</span>(<span class='no'>m</span>, <span class='no'>colors</span>, <span class='no'>...</span>)
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="axis.html">mobile_hide_axis()</a></code> <code><a href="axis.html">mobile_axis_x()</a></code> <code><a href="axis.html">mobile_axis_y()</a></code> </p>
-        </td>
-        <td><p>Axis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="geom.html">mobile_bar()</a></code> <code><a href="geom.html">mobile_point()</a></code> <code><a href="geom.html">mobile_path()</a></code> <code><a href="geom.html">mobile_line()</a></code> <code><a href="geom.html">mobile_area()</a></code> <code><a href="geom.html">mobile_polygon()</a></code> <code><a href="geom.html">mobile_schema()</a></code> </p>
-        </td>
-        <td><p>Geoms</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile-shiny.html">mobileOutput()</a></code> <code><a href="mobile-shiny.html">render_mobile()</a></code> </p>
-        </td>
-        <td><p>Shiny bindings for mobile</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile.html">mobile()</a></code> </p>
-        </td>
-        <td><p>Initialise</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_animate.html">mobile_animate()</a></code> </p>
-        </td>
-        <td><p>Animate</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_coord.html">mobile_coord()</a></code> </p>
-        </td>
-        <td><p>Coordinates</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_legend.html">mobile_legend()</a></code> </p>
-        </td>
-        <td><p>Legend</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_options.html">mobile_options()</a></code> </p>
-        </td>
-        <td><p>General Options</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_tooltip.html">mobile_tooltip()</a></code> </p>
-        </td>
-        <td><p>Tooltip</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scale.html">mobile_scale_x()</a></code> <code><a href="scale.html">mobile_scale_y()</a></code> </p>
-        </td>
-        <td><p>Scale</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="theme.html">mobile_theme()</a></code> <code><a href="theme.html">mobile_ggplot_theme()</a></code> </p>
-        </td>
-        <td><p>Theme</p></td>
-      </tr>
-    </tbody>
+<span class='fu'>mobile_ggplot_theme</span>(<span class='no'>m</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='no'>...</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>m</th>
+      <td><p>An object of class <code>mobile</code> as returned by <code><a href='mobile.html'>mobile</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>colors</th>
+      <td><p>A vector of colors to use as palette.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Any other options.</p></td>
+    </tr>
+    <tr>
+      <th>n</th>
+      <td><p>Number of colors to generate.</p></td>
+    </tr>
     </table>
-  </div>
 
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
     </ul>
+
   </div>
 </div>
 
