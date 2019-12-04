@@ -30,7 +30,7 @@ has_aes <- function(...){
 combine_aes <- function(main_aes = NULL, aes = NULL, inherit = TRUE){
 
   if(isTRUE(inherit) && !length(main_aes))
-    return(main_aes)
+    return(aes)
 
   if(isTRUE(inherit)){
     # aes overrides main_aes

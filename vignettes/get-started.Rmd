@@ -14,22 +14,6 @@ knitr::opts_chunk$set(
 )
 
 library(htmltools)
-
-device <- function(...){
-  div(
-    class="marvel-device iphone8 silver",
-    div(class="top-bar"),
-    div(class="sleep"),
-    div(class="sleep"),
-    div(class="volume"),
-    div(class="camera"),
-    div(class="sensor"),
-    div(class="speaker"),
-    div(class="screen", ...),
-    div(class="home"),
-    div(class="bottom-bar")
-  )
-}
 ```
 
 ```{r setup}
@@ -49,18 +33,10 @@ mobile(cars, aes(speed, dist)) %>%
 
 Since this package generates charts for the mobile tooltips work on click not on hover.
 
-
-```{r, echo=TRUE, eval=FALSE}
+```{r}
 mobile(cars, aes(speed, dist)) %>% 
   mobile_point() %>% 
   mobile_tooltip(snap = TRUE)
-```
-
-```{r, echo=FALSE}
-mobile(cars, aes(speed, dist)) %>% 
-  mobile_point() %>% 
-  mobile_tooltip(snap = TRUE) %>% 
-  device()
 ```
 
 ## Pie
