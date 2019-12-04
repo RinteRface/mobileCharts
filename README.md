@@ -14,7 +14,7 @@ remotes::install_github("rinterface/mobileCharts")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+See the [website](https://mobilecharts.rinterface.com/) for more examples.
 
 ``` r
 library(mobileCharts)
