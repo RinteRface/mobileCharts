@@ -4,3 +4,11 @@ template:
   params:
     bootswatch: lumen
 
+development:
+  mode: devel
+
+authors:
+  John Coene:
+    href: https://john-coene.com
+  Rinterface:
+    href: https://rinterface.com
