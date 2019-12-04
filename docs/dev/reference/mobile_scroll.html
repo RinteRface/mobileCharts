@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • mobileCharts</title>
+<title>Scroll — mobile_scroll • mobileCharts</title>
 
 
 <!-- jquery -->
@@ -35,7 +35,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Scroll — mobile_scroll" />
+<meta property="og:description" content="Add a scrollbar to let user pan charts." />
+<meta name="twitter:card" content="summary" />
 
 
 <meta name="robots" content="noindex">
@@ -53,7 +55,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -106,114 +108,54 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Scroll</h1>
+    
+    <div class="hidden name"><code>mobile_scroll.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Add a scrollbar to let user pan charts.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>mobile_scroll</span>(<span class='no'>m</span>, <span class='kw'>mode</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"x"</span>, <span class='st'>"y"</span>, <span class='st'>"xy"</span>), <span class='no'>...</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="axis.html">mobile_hide_axis()</a></code> <code><a href="axis.html">mobile_axis_x()</a></code> <code><a href="axis.html">mobile_axis_y()</a></code> </p>
-        </td>
-        <td><p>Axis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="geom.html">mobile_bar()</a></code> <code><a href="geom.html">mobile_point()</a></code> <code><a href="geom.html">mobile_path()</a></code> <code><a href="geom.html">mobile_line()</a></code> <code><a href="geom.html">mobile_area()</a></code> <code><a href="geom.html">mobile_polygon()</a></code> <code><a href="geom.html">mobile_schema()</a></code> </p>
-        </td>
-        <td><p>Geoms</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile-shiny.html">mobileOutput()</a></code> <code><a href="mobile-shiny.html">render_mobile()</a></code> </p>
-        </td>
-        <td><p>Shiny bindings for mobile</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile.html">mobile()</a></code> </p>
-        </td>
-        <td><p>Initialise</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_animate.html">mobile_animate()</a></code> </p>
-        </td>
-        <td><p>Animate</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_coord.html">mobile_coord()</a></code> </p>
-        </td>
-        <td><p>Coordinates</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_interaction.html">mobile_interaction()</a></code> </p>
-        </td>
-        <td><p>Add Interactions</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_legend.html">mobile_legend()</a></code> </p>
-        </td>
-        <td><p>Legend</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_options.html">mobile_options()</a></code> </p>
-        </td>
-        <td><p>General Options</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_scroll.html">mobile_scroll()</a></code> </p>
-        </td>
-        <td><p>Scroll</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mobile_tooltip.html">mobile_tooltip()</a></code> </p>
-        </td>
-        <td><p>Tooltip</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scale.html">mobile_scale_x()</a></code> <code><a href="scale.html">mobile_scale_y()</a></code> </p>
-        </td>
-        <td><p>Scale</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="theme.html">mobile_theme()</a></code> <code><a href="theme.html">mobile_ggplot_theme()</a></code> </p>
-        </td>
-        <td><p>Theme</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>m</th>
+      <td><p>An object of class <code>mobile</code> as returned by <code><a href='mobile.html'>mobile</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>mode</th>
+      <td><p>Axis to apply scroll to.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Named options from the 
+<a href='https://f2.antv.vision/en/docs/api/chart/scroll-bar'>official documentation</a>.</p></td>
+    </tr>
     </table>
-  </div>
 
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'># range for pan</span>
+<span class='no'>lmt</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>min</span> <span class='kw'>=</span> -<span class='fl'>20</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='fl'>20</span>))
+
+<span class='fu'><a href='mobile.html'>mobile</a></span>(<span class='no'>df</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(<span class='no'>x</span>, <span class='no'>y</span>)) <span class='kw'>%&gt;%</span>
+ <span class='fu'><a href='geom.html'>mobile_bar</a></span>() <span class='kw'>%&gt;%</span>
+ <span class='fu'><a href='mobile_interaction.html'>mobile_interaction</a></span>(<span class='st'>"pan"</span>, <span class='kw'>limitRange</span> <span class='kw'>=</span> <span class='no'>lmt</span>) <span class='kw'>%&gt;%</span>
+ <span class='fu'>mobile_scroll</span>(<span class='kw'>mode</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>xStyle</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>offsetY</span> <span class='kw'>=</span> -<span class='fl'>5</span>))</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 

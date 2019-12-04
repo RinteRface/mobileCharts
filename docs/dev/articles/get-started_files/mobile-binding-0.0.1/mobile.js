@@ -85,6 +85,15 @@ HTMLWidgets.widget({
           });
         }
 
+        if(x.interactions){
+          x.interactions.forEach(function(inter){
+            chart.interaction(inter.var, inter.opts);
+          });
+        }
+
+        if(x.scroll)
+          chart.scrollBar(x.scroll);
+
         chart.render();
 
       },
