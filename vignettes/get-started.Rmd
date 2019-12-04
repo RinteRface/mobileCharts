@@ -108,3 +108,22 @@ mobile(mtcars, aes(qsec, wt)) %>%
   mobile_line() %>% 
   mobile_point(aes(y = mpg, color = "red"))
 ```
+
+## Theme
+
+You can define your own theme with `mobile_theme`.
+
+```{r}
+mob <- mobile(iris, aes(Petal.Length, Petal.Width, color = Species)) %>% 
+  mobile_point() 
+
+# get plasma colors
+colors <- viridis::plasma(4)
+
+mob %>% 
+  mobile_theme(colors)
+
+# ggplot2 emulation
+mob %>% 
+  mobile_ggplot_theme(n = 4)
+```
