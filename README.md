@@ -16,7 +16,7 @@ remotes::install_github("rinterface/mobileCharts")
 
 ## Example
 
-See the [website](https://mobilecharts.rinterface.com/) for more examples.
+See the [website](https://mobilecharts.rinterface.com/) for more examples. Visit the [demo](https://shiny.john-coene.com/mobileCharts/) (from your mobile) to have a better idea of the look and feel.
 
 ``` r
 library(mobileCharts)
