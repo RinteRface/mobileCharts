@@ -6,7 +6,7 @@
 \alias{mobile_ggplot_theme}
 \title{Theme}
 \usage{
-mobile_theme(m, colors, ...)
+mobile_theme(m, colors, ..., background_color = NULL)
 
 mobile_ggplot_theme(m, n = 3, ...)
 }
@@ -16,6 +16,9 @@ mobile_ggplot_theme(m, n = 3, ...)
 \item{colors}{A vector of colors to use as palette.}
 
 \item{...}{Any other options.}
+
+\item{background_color}{Background color of plot, 
+if \code{NULL} will be transparent.}
 
 \item{n}{Number of colors to generate.}
 }

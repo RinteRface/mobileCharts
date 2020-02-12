@@ -16,10 +16,11 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
+    shiny,
     purrr,
     rlang,
     ggplot2,
     magrittr,
     htmltools,
     htmlwidgets
-RoxygenNote: 7.0.1
+RoxygenNote: 7.0.2

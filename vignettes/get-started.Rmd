@@ -146,4 +146,7 @@ mob %>%
 # ggplot2 emulation
 mob %>% 
   mobile_ggplot_theme(n = 4)
+
+mob %>% 
+  mobile_theme(colors = c("#ffffff"), background_color="#000000")
 ```
